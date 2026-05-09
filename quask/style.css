@@ -113,6 +113,88 @@ footer { border-top: 1px solid var(--border-color); padding: 50px 0 20px; }
 .policy-content h2 { font-size: 1.6rem; color: white; margin-bottom: 20px; text-transform: uppercase; font-weight: 700; }
 .policy-content p, .policy-content li { color: #d1d5db; margin-bottom: 15px; line-height: 1.8; font-weight: 300; font-size: 1.1rem; }
 .policy-content ul { padding-left: 25px; list-style: disc; margin-bottom: 20px; }
+.policy-content ol { padding-left: 25px; list-style: decimal; margin-bottom: 20px; }
+
+/* =============================================
+   SECÇÃO AFILIADOS (index)
+   ============================================= */
+.afiliados-section { background: var(--quask-dark); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+.afiliados-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+.afiliados-benefits { display: flex; flex-direction: column; gap: 28px; }
+.benefit-item { display: flex; gap: 20px; align-items: flex-start; }
+.benefit-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: #1f2937; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--quask-red); }
+.benefit-icon i { width: 24px; height: 24px; }
+.benefit-item h4 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
+.benefit-item p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+.benefit-item p strong { color: white; }
+
+.afiliados-cta-card { background: var(--quask-black); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; display: flex; flex-direction: column; gap: 28px; position: sticky; top: 100px; }
+.afiliados-cta-top { text-align: center; }
+.afiliados-badge-icon { width: 72px; height: 72px; background: rgba(229,9,20,0.12); border: 1px solid rgba(229,9,20,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--quask-red); margin: 0 auto 20px; }
+.afiliados-badge-icon i { width: 36px; height: 36px; }
+.afiliados-cta-top h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.afiliados-cta-top p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+.afiliados-steps { display: flex; flex-direction: column; gap: 14px; }
+.afiliados-steps li { display: flex; align-items: center; gap: 14px; color: #d1d5db; font-size: 0.95rem; }
+.afiliados-steps li span { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--quask-red); color: white; font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+/* Afiliados page cards */
+.afl-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 10px; }
+.afl-info-card { background: var(--quask-dark); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; transition: 0.3s; }
+.afl-info-card:hover { border-color: #4b5563; transform: translateY(-4px); }
+.afl-info-icon { width: 56px; height: 56px; background: rgba(229,9,20,0.1); border: 1px solid rgba(229,9,20,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--quask-red); margin-bottom: 20px; }
+.afl-info-icon i { width: 28px; height: 28px; }
+.afl-info-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
+.afl-info-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+.afl-info-card p strong { color: white; }
+
+.afl-example { display: flex; flex-direction: column; gap: 0; max-width: 600px; }
+.afl-example-step { background: var(--quask-dark); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px 26px; display: flex; align-items: flex-start; gap: 18px; }
+.afl-example-step.highlight { border-color: var(--quask-red); background: rgba(229,9,20,0.05); }
+.afl-example-step span { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--quask-red); color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.afl-example-step p { color: #d1d5db; font-size: 1rem; margin: 0; line-height: 1.6; }
+.afl-example-arrow { display: flex; justify-content: center; padding: 6px 0; color: var(--quask-red); }
+.afl-example-arrow i { width: 20px; height: 20px; }
+
+/* =============================================
+   MODAL AFILIADO
+   ============================================= */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); z-index: 999; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+.modal-overlay.active { opacity: 1; pointer-events: all; }
+.modal-box { background: var(--quask-dark); border: 1px solid var(--border-color); border-radius: 20px; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto; position: relative; padding: 40px; transform: translateY(20px); transition: transform 0.25s; }
+.modal-overlay.active .modal-box { transform: translateY(0); }
+.modal-close { position: absolute; top: 18px; right: 18px; background: #1f2937; border: 1px solid var(--border-color); border-radius: 8px; color: white; cursor: pointer; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
+.modal-close:hover { background: var(--quask-red); border-color: var(--quask-red); }
+.modal-header { text-align: center; margin-bottom: 28px; }
+.modal-icon { width: 64px; height: 64px; background: rgba(229,9,20,0.1); border: 1px solid rgba(229,9,20,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--quask-red); margin: 0 auto 18px; }
+.modal-icon i { width: 30px; height: 30px; }
+.modal-header h2 { font-size: 1.6rem; margin-bottom: 8px; }
+.modal-header p { color: var(--text-muted); font-size: 0.95rem; }
+.modal-body { display: flex; flex-direction: column; gap: 18px; }
+.form-group { display: flex; flex-direction: column; gap: 7px; }
+.form-group label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #d1d5db; }
+.form-group input { background: var(--quask-black); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; color: white; font-size: 0.95rem; font-family: 'Inter', sans-serif; transition: 0.2s; outline: none; }
+.form-group input:focus { border-color: var(--quask-red); }
+.form-group input::placeholder { color: #6b7280; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field-error { font-size: 0.8rem; color: #f87171; min-height: 16px; }
+.termos-box { background: var(--quask-black); border: 1px solid var(--border-color); border-radius: 10px; padding: 18px 20px; }
+.termos-box h4 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #d1d5db; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.termos-box h4 i { color: var(--quask-red); width: 16px; height: 16px; }
+.termos-box ul { padding-left: 18px; list-style: disc; display: flex; flex-direction: column; gap: 7px; }
+.termos-box ul li { color: #9ca3af; font-size: 0.875rem; line-height: 1.5; }
+.termos-box ul li strong { color: #d1d5db; }
+.checkbox-label { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+.checkbox-label input[type="checkbox"] { flex-shrink: 0; width: 18px; height: 18px; accent-color: var(--quask-red); margin-top: 2px; cursor: pointer; }
+.checkbox-label span { font-size: 0.9rem; color: #d1d5db; line-height: 1.5; }
+
+/* Modal success */
+.modal-success { text-align: center; padding: 20px 0; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.success-icon { width: 80px; height: 80px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #22c55e; }
+.success-icon i { width: 40px; height: 40px; }
+.modal-success h2 { font-size: 1.6rem; }
+.modal-success p { color: var(--text-muted); font-size: 0.95rem; max-width: 380px; line-height: 1.7; }
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -123,4 +205,9 @@ footer { border-top: 1px solid var(--border-color); padding: 50px 0 20px; }
   .contact-card { grid-template-columns: 1fr; gap: 40px; padding: 30px; }
   .footer-top { flex-direction: column; text-align: center; }
   .section-title { font-size: 2.2rem; }
+  .afiliados-grid { grid-template-columns: 1fr; gap: 40px; }
+  .afiliados-cta-card { position: static; }
+  .afl-cards-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .modal-box { padding: 28px 22px; }
 }
