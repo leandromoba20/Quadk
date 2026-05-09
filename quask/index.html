@@ -16,6 +16,7 @@
                 <a href="#inicio" class="nav-link">Início</a>
                 <a href="#planos" class="nav-link">Planos</a>
                 <a href="#vantagens" class="nav-link">Vantagens</a>
+                <a href="#afiliados" class="nav-link">Afiliados</a>
                 <a href="#contato" class="nav-link">Contato</a>
             </nav>
             <button class="menu-toggle" id="menu-toggle">
@@ -26,6 +27,7 @@
             <a href="#inicio" class="nav-link">Início</a>
             <a href="#planos" class="nav-link">Planos</a>
             <a href="#vantagens" class="nav-link">Vantagens</a>
+            <a href="#afiliados" class="nav-link">Afiliados</a>
             <a href="#contato" class="nav-link">Contato</a>
         </div>
     </header>
@@ -54,7 +56,7 @@
             <div class="grid">
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80" alt="Netflix Basic">
+                        <img src="img/Pc.jpeg" alt="Netflix Basic">
                         <h4>Basic</h4>
                     </div>
                     <div class="card-content">
@@ -69,7 +71,7 @@
                 <div class="card popular">
                     <div class="badge">Mais Vendido</div>
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80" alt="Netflix Premium">
+                        <img src="img/Pc.jpeg" alt="Netflix Premium">
                         <h4>Premium</h4>
                     </div>
                     <div class="card-content">
@@ -83,7 +85,7 @@
 
                 <div class="card">
                     <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?q=80" alt="Netflix Mais">
+                        <img src="img/Pc.jpeg" alt="Netflix Mais">
                         <h4>Mais</h4>
                     </div>
                     <div class="card-content">
@@ -216,6 +218,63 @@
         </div>
     </section>
 
+    <!-- ===== SECÇÃO AFILIADOS ===== -->
+    <section id="afiliados" class="afiliados-section">
+        <div class="container">
+            <h2 class="section-title">Programa de <span>Afiliados</span></h2>
+            <p class="section-subtitle">Indique amigos, ganhe recompensas. Simples assim.</p>
+
+            <div class="afiliados-grid">
+                <!-- Benefícios -->
+                <div class="afiliados-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i data-lucide="gift"></i></div>
+                        <div>
+                            <h4>1 Semana de Netflix Grátis</h4>
+                            <p>Para cada novo cliente que comprar um plano acima de <strong>5.000 Kz</strong> usando o seu nome ou código, você ganha <strong>1 semana de Netflix gratuita</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i data-lucide="tag"></i></div>
+                        <div>
+                            <h4>Desconto para o seu Indicado</h4>
+                            <p>O cliente que você indicar recebe <strong>1.000 Kz de desconto</strong> na primeira compra ao usar o seu código.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i data-lucide="users"></i></div>
+                        <div>
+                            <h4>Sem Limite de Indicações</h4>
+                            <p>Pode indicar quantas pessoas quiser. Cada <strong>cliente novo</strong> que comprar vale uma recompensa para você.</p>
+                        </div>
+                    </div>
+                    <a href="afiliados.html" class="btn btn-outline" style="margin-top: 10px; gap: 8px;">
+                        <i data-lucide="info"></i> Saber Mais sobre o Programa
+                    </a>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="afiliados-cta-card">
+                    <div class="afiliados-cta-top">
+                        <div class="afiliados-badge-icon"><i data-lucide="award"></i></div>
+                        <h3>Torne-se um Afiliado</h3>
+                        <p>Junte-se ao nosso programa, divulgue a QUASK e comece a ganhar recompensas hoje mesmo.</p>
+                    </div>
+                    <ul class="afiliados-steps">
+                        <li><span>1</span> Preencha o formulário com seus dados</li>
+                        <li><span>2</span> Aceite os termos de responsabilidade</li>
+                        <li><span>3</span> Aguarde aprovação via WhatsApp</li>
+                        <li><span>4</span> Receba seu código e comece a indicar!</li>
+                    </ul>
+                    <button class="btn btn-red" id="btn-open-afiliado" style="width: 100%; padding: 16px; font-size: 1.05rem; gap: 8px;">
+                        <i data-lucide="user-plus"></i> Tornar-me Afiliado
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== FIM SECÇÃO AFILIADOS ===== -->
+
     <section id="sobre" class="plans-bg">
         <div class="container about-grid">
             <div class="about-text">
@@ -295,6 +354,7 @@
                     <p style="color: var(--text-muted); margin-top: 8px; font-size: 0.9rem;">Seu acesso simples ao mundo digital.</p>
                 </div>
                 <div class="footer-links">
+                    <a href="afiliados.html">Afiliados</a>
                     <a href="politica.html">Política da Empresa</a>
                     <a href="termos.html">Termos de Uso</a>
                 </div>
@@ -305,6 +365,77 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== MODAL AFILIADO ===== -->
+    <div id="modal-afiliado" class="modal-overlay" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" aria-label="Fechar"><i data-lucide="x"></i></button>
+
+            <!-- Passo 1: Formulário -->
+            <div id="modal-step-1">
+                <div class="modal-header">
+                    <div class="modal-icon"><i data-lucide="user-plus"></i></div>
+                    <h2 id="modal-title">Tornar-me Afiliado</h2>
+                    <p>Preencha os seus dados para enviar a candidatura.</p>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="af-nome">Nome Completo *</label>
+                        <input type="text" id="af-nome" placeholder="Ex: João Manuel Silva" autocomplete="off">
+                        <span class="field-error" id="err-nome"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="af-localizacao">Localização *</label>
+                            <input type="text" id="af-localizacao" placeholder="Ex: Luanda, Viana">
+                            <span class="field-error" id="err-loc"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="af-idade">Idade *</label>
+                            <input type="number" id="af-idade" placeholder="Ex: 22" min="16" max="99">
+                            <span class="field-error" id="err-idade"></span>
+                        </div>
+                    </div>
+
+                    <div class="termos-box">
+                        <h4><i data-lucide="file-text"></i> Termos de Responsabilidade</h4>
+                        <ul>
+                            <li>Comprometo-me a divulgar a QUASK de forma honesta e ética.</li>
+                            <li>Não farei declarações falsas sobre os produtos ou preços da QUASK.</li>
+                            <li>Cada cliente só é válido <strong>uma única vez</strong> — o mesmo cliente indicado duas vezes não gera recompensa.</li>
+                            <li>A recompensa (1 semana de Netflix grátis) aplica-se apenas a vendas de planos <strong>acima de 5.000 Kz</strong>.</li>
+                            <li>O código/link de afiliado é pessoal e intransmissível.</li>
+                            <li>A QUASK reserva o direito de cancelar o estatuto de afiliado em caso de uso indevido.</li>
+                        </ul>
+                    </div>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="af-termos">
+                        <span>Li e aceito todos os termos de responsabilidade acima.</span>
+                    </label>
+                    <span class="field-error" id="err-termos"></span>
+
+                    <button class="btn btn-red" id="btn-enviar-afiliado" style="width: 100%; padding: 15px; font-size: 1rem; margin-top: 10px; gap: 8px;">
+                        <i data-lucide="send"></i> Enviar Candidatura
+                    </button>
+                </div>
+            </div>
+
+            <!-- Passo 2: Sucesso -->
+            <div id="modal-step-2" style="display:none;">
+                <div class="modal-success">
+                    <div class="success-icon"><i data-lucide="check-circle"></i></div>
+                    <h2>Candidatura Enviada!</h2>
+                    <p>Os seus dados foram encaminhados para a equipa QUASK via WhatsApp. Aguarde aprovação — entraremos em contacto brevemente com o seu código de afiliado.</p>
+                    <button class="btn btn-red" id="btn-fechar-sucesso" style="margin-top: 20px; gap: 8px;">
+                        <i data-lucide="check"></i> Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== FIM MODAL ===== -->
 
     <script src="script.js"></script>
 </body>
